@@ -45,12 +45,21 @@ VALID_REFERRER_POLICIES = {
 
 
 def print_banner():
-    print("""
-========================================
-       WEB SECURITY HEADER SCANNER
-========================================
-""")
+    RED = "\033[91m"
+    DARK_RED = "\033[31m"
+    WHITE = "\033[97m"
+    RESET = "\033[0m"
 
+    print(f"""
+{RED} _       __     __   ____   ____  _____    ____  ____
+| |     / /__  / /  / __ \ / __ \/ ___/   / __ \/ __ \
+| | /| / / _ \/ /  / /_/ // /_/ / /       / /_/ / /_/ /
+| |/ |/ /  __/ /  / _, _// ____/ /___    / _, _/ ____
+|__/|__/\___/_/  /_/ |_/_/    \____/   /_/ |_/_/
+{RESET}
+{DARK_RED}==================== W E B R E A P E R ===================={RESET}
+{WHITE}                 WEB SECURITY ANALYZER{RESET}
+""")
 
 def validate_url(url):
     parsed = urlparse(url)
